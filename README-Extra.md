@@ -28,17 +28,96 @@ $ traceroute <host-ip>
 ```
 </details>
 
-### Reconnasiance/Footprinting
+## Reconnasiance/Footprinting
 <details>
-  <summary>Recon</summary>
+    <summary> 1) Windows CLI tools </summary>
 
-- -r range , Scan Entire Network for ALive host using ARP
-```console
-$ netdiscover -r 192.168.29.1/24
+```bash
+$ ping <ip>
+ or 
+$ ping www.domain.com
+```
+````console
+$ ping <host-ip> -f -l 1300
+````
+```bash
+$ nslookup <domain.com>
+```
+```bash
+$ tracert <doamin>
+
+$ traceroute <host-ip>
 ```
 </details>
 
 
+### 2)Edit,Debug and monitor
+<details>
+    <summary> 2)Firebug </summary>
+- Firebug extension Integrated with Firefox
+</details>
+
+### 3)Mirroring website:
+<details>
+    <summary> Mirroring</summary>
+    
+- Windows: HTTrack
+
+- Linux: wget
+```bash
+ $ wget <url-of-website>
+``` 
+#### Note:- check wget -h for options
+
+</details>
+
+### 4)Advance route tracing 
+#### Tool: Path Analyzer Pro
+
+<details>
+    <summary> 5)Information Gathering Using Metasploit</summary>
+
+#### Extract accurate information about a network using Metasploit Framework.
+
+```bash
+$ service postgresql start
+```
+```bash
+In msf type 
+$db_status
+```
+If error then exit and type below commands
+- To initialize database
+```
+$ msfdb init
+```
+```
+$ service postgresql start
+```
+relaunch metasploit Framework
+```
+$ msfconsole
+$ db_status
+$ nmap -Pn -sS -A -oX <output_file> <subnet(xx.xx.xx.x/24)>
+```
+you can use different options and also remove some options
+```
+$ hosts
+```
+to get host information
+
+```
+$ use auxilliary/scanner/smb/smb_version
+or 
+$ use /scanner/smb/smb_version
+$ show options
+$ set RHOSTS xx.xx.xx.8-16
+$ set THREADS 1000
+$ run 
+```
+- Now you can see the os_flavor 
+- Hence Extracted information about network using metasploit
+</details>
 
 ## Scanning Networks
 <details>
