@@ -7,5 +7,6 @@
 :~$ nslookup <domain.com>
 :~$ tracert  <ip>
 ````
+
 </details>
 
