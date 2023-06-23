@@ -1,46 +1,33 @@
 
-# CEH-Practical
+# Tools
 
 
 
-## Footprinting and Reconnaissance
+## In Parrot 
 
-1)Windows CLI tools
+- netdiscover
+- NMAP
+- Hydra
+- John the Ripper
+- wpscan
+- sqlmap
+- ADB
 
-```bash
- $ ping <ip>
-```
-```bash
- $ nslookup <domain.com>
-```
-```bash
- $ tracert <ip>
-```
+## Windows
 
-## Footprinting and Reconnaissance
-
-Windows CLI tools
-
-```bash
- $ ping <host-ip>
-```
-ex:- $ ping <host-ip> -f -l 1300
-```bash
- $ nslookup <domain.com>
-```
-```bash
- $ traceroute <host-ip>
-```
+- Wireshark
+- Hashcalc
+- Veracrypt
+- BCTextEncoder
+- Cryptool
+- Snow
+- Openstego
+- quickstego
+- 
 ## Documentation
 
 [Documentation](https://linktodocumentation)
 
-
-## Roadmap
-
-- Additional browser support
-
-- Add more integrations
 
 
 ## code
@@ -48,8 +35,4 @@ ex:- $ ping <host-ip> -f -l 1300
  ping <host-ip> -f -l 1300
 ````
 
-
-## Appendix
-
-Any additional information goes here
 
