@@ -123,3 +123,17 @@ hping3 -S 10.10.10.10 -p 80 -c 5
 hping3 10.10.10.10 --flood
 ``` 
 </details>
+
+
+## Enumeration
+<details>
+    <summary>Enumeration</summary>
+
+ ### 1) NetBios Enumeration
+#### Tool: Global Network Inventory
+- Audit Scan Mode >> Select IP range >> Authentication setting >> connect as windows 12(victim) server using credentials that is currently logged on
+- The Scan Summary tab displays a brief summary of machine that has been scanned. It will shows you the Machine name, MAC Address, OS installed, and etc.
+### 2) Network Resources
+#### Tool: Advanced IP Scanner  
+- Enumerate network resources using Advanced IP Scanner
+</details>
