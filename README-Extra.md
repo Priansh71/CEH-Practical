@@ -26,7 +26,9 @@ $ traceroute <host-ip>
 ### 2)Edit,Debug and monitor
 <details>
     <summary> 2)Firebug </summary>
+    
 - Firebug extension Integrated with Firefox
+  
 </details>
 
 ### 3)Mirroring website:
