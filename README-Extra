@@ -4,6 +4,6 @@
 * Windows CLI tools
 :~$ Ping <ip>
 :~$ nslookup <domain.com>
-:~$ tracert <ip>
+:~$ tracert  <ip>
 
 </details>
