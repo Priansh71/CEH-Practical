@@ -7,6 +7,26 @@ $ nslookup <domain.com>
 $ tracert  <ip>
 ```
 
+<details>
+    <summary> 1)Windows CLI tools </summary>
+
+```bash
+$ ping <ip>
+ or 
+$ ping www.domain.com
+```
+````console
+$ ping <host-ip> -f -l 1300
+````
+```bash
+$ nslookup <domain.com>
+```
+```bash
+$ tracert <doamin>
+
+$ traceroute <host-ip>
+```
+</details>
 
 ### Reconnasiance/Footprinting
 <details>
