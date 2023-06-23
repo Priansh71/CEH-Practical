@@ -1,2 +1,9 @@
 # Footprinting and Reconnaissance
-<summary>Tools</summary>
+<details>
+  <summary>Tools</summary>
+* Windows CLI tools
+:~$ Ping <ip>
+:~$ nslookup <domain.com>
+:~$ tracert <ip>
+
+</details>
