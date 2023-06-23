@@ -2,8 +2,9 @@
 <details>
   <summary>Tools</summary>
 * Windows CLI tools
+````console
 :~$ Ping <ip>
 :~$ nslookup <domain.com>
 :~$ tracert  <ip>
-
+````
 </details>
