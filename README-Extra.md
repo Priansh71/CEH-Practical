@@ -41,7 +41,7 @@ $ netdiscover -r 192.168.29.1/24
 
 
 ## Scanning Networks
-<defines>
+<details>
     <summary>Scanning Networks</summary
 - Port Scanning using Hping3:
 
@@ -70,4 +70,4 @@ hping3 -S 10.10.10.10 -p 80 -c 5
 ```
 hping3 10.10.10.10 --flood
 ``` 
-</defines>
+</details>
