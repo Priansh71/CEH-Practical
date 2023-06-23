@@ -1,34 +1,6 @@
 ## Footprinting and Reconnaissance
-### Tools
-- Windows CLI tools
-```console
-$ Ping <ip>
-$ nslookup <domain.com>
-$ tracert  <ip>
-```
-
 <details>
-    <summary> 1)Windows CLI tools </summary>
-
-```bash
-$ ping <ip>
- or 
-$ ping www.domain.com
-```
-````console
-$ ping <host-ip> -f -l 1300
-````
-```bash
-$ nslookup <domain.com>
-```
-```bash
-$ tracert <doamin>
-
-$ traceroute <host-ip>
-```
-</details>
-
-## Reconnasiance/Footprinting
+    <summary> Reconnasiance/Footprinting</summary>
 <details>
     <summary> 1) Windows CLI tools </summary>
 
@@ -118,7 +90,7 @@ $ run
 - Now you can see the os_flavor 
 - Hence Extracted information about network using metasploit
 </details>
-
+</details>
 ## Scanning Networks
 <details>
     <summary>Scanning Networks</summary
