@@ -230,5 +230,9 @@ cd
 ls
 echo
 ```
-
+#### Download a File from Android using ADB tool
+```bash
+adb pull /sdcard/log.txt C:
+adb pull sdcard/log. txt /home/murphy/Desktop
+```
 </details>
