@@ -220,5 +220,15 @@ apt-get install adb -y
 ```bash
 adb devices -l
 adb connect xx.xx.xx.4:5555 //5555 is port of android discovered in 'nmap -O' scan
+adb shell // 'To get shell access'
 ```
+- You can run commands like
+
+```bash
+pwd
+cd
+ls
+echo
+```
+
 </details>
