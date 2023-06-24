@@ -242,7 +242,6 @@ adb pull sdcard/log. txt /home/murphy/Desktop
 <details>
     <summary>SQL Injection</summary>
     
-## Module 15: SQL Injection
 - ### SQLMAP Extract DBS
 ```bash
 sqlmap -u “http://www.example.com/viewprofile.aspx?id=1” --cookie="xookies xxx" --dbs
