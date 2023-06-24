@@ -135,7 +135,14 @@ hping3 10.10.10.10 --flood
 #### Tool: Global Network Inventory
 - Audit Scan Mode >> Select IP range >> Authentication setting >> connect as windows 12(victim) server using credentials that is currently logged on
 - The Scan Summary tab displays a brief summary of machine that has been scanned. It will shows you the Machine name, MAC Address, OS installed, and etc.
+- User groups,Services,Installed Softwares etc can be seen in the scan summmary.
 ### 2) Network Resources
 #### Tool: Advanced IP Scanner  
-- Enumerate network resources using Advanced IP Scanner
+- Enumerate network resources using Advanced IP Scanner.
+- Perform a system ard network scan, Enumerate user accounts, Execute remotepenetration, Gather information about local network
+- Input range of IP
+- Now you have the IP address, Name, MAC address, and Manufacturer information of the victim machine.
+
+### 3) Network enum using superscan
+#### Tool: Superscan
 </details>
