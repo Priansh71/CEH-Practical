@@ -208,12 +208,14 @@ nikto -h url -Cgidirs all
 ## Android Hacking
 <details>
     <summary>ADB</summary>
-'''bash
+    
+```bash
 netdiscover -r xx.xx.xx.xx/24
 nmap -O xx.xx.xx.4
 apt-get update
 apt-get install adb -y
 ```
+
 - Use
 ```bash
 adb devices -l
