@@ -10,7 +10,7 @@
 :~$ netdiscover -r 192.168.29.1/24
 ```
 * -O scans for the operating system of the device IP
-```
+```console
 :~$ namp -O 192.168.29.4
 ```
 
