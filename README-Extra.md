@@ -204,3 +204,19 @@ net use // session with name e would have been created
 nikto -h url -Cgidirs all
 ```
 </details>
+
+## Android Hacking
+<details>
+    <summary>ADB</summary>
+'''bash
+netdiscover -r xx.xx.xx.xx/24
+nmap -O xx.xx.xx.4
+apt-get update
+apt-get install adb -y
+```
+- Use
+```bash
+adb devices -l
+adb connect xx.xx.xx.4:5555 //5555 is port of android discovered in 'nmap -O' scan
+```
+</details>
