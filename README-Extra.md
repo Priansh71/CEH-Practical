@@ -157,7 +157,27 @@ hping3 10.10.10.10 --flood
 - select different nodes to view their information
 - Users, Services, User Rights, Scheduled jobs
 
- ### 5) 
+ ### 5) SMB ENumeration
+#### Tools: nbstat,nmap
+
+- In windows 12
+```bash
+nmap -O <win-12-ip>
+```
+
+```bash
+nbstat -A xx.xx.xx.xx  //perform nbstat scan on port 139 in cmd
+net use
+net use \\xx.xx.xx.xx\e ""\user:""
+net use \\xx.xx.xx.16\e""/user:""  //create null session 
+// xx.xx.xx.16 is windows server 16
+```
+- disconnect drive Z
+-this creates a null session 
+- confirm by using
+```bash
+net use // session with name e would have been created
+```
 
 
 ##### Note: Your first target is the computer with a Windows OS on which you can see ports 139 and 445 open. Remember, this usually works only against Windows but may partially succeed if other OSs have these ports open. There may be more than one system with NetBIOS open. You see that ports 135. 139.445. etc. are open and port 139 is using NetBIOS.
