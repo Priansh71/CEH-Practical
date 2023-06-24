@@ -136,6 +136,7 @@ hping3 10.10.10.10 --flood
 - Audit Scan Mode >> Select IP range >> Authentication setting >> connect as windows 12(victim) server using credentials that is currently logged on
 - The Scan Summary tab displays a brief summary of machine that has been scanned. It will shows you the Machine name, MAC Address, OS installed, and etc.
 - User groups,Services,Installed Softwares etc can be seen in the scan summmary.
+  
 ### 2) Network Resources
 #### Tool: Advanced IP Scanner  
 - Enumerate network resources using Advanced IP Scanner.
@@ -145,4 +146,25 @@ hping3 10.10.10.10 --flood
 
 ### 3) Network enum using superscan
 #### Tool: Superscan
+- Lists of computers that belong to a domain
+- Lists Of shares on the individual hosts on the network
+- Policies and passwords
+- Enter hostname/IP/URL >> select Enumeration type >> and see the scan result for required information.
+
+### 4) Resurces in Local machine
+#### Tool: Hyena
+- Click '+' node of local workstation to expand section.
+- select different nodes to view their information
+- Users, Services, User Rights, Scheduled jobs
+
+ ### 5) 
+
+
+##### Note: Your first target is the computer with a Windows OS on which you can see ports 139 and 445 open. Remember, this usually works only against Windows but may partially succeed if other OSs have these ports open. There may be more than one system with NetBIOS open. You see that ports 135. 139.445. etc. are open and port 139 is using NetBIOS.
+
+  ### 6) Some other tools
+#### Tools:
+- NetBIOS Enumerator
+- SoftPerfect Network Scanner
+
 </details>
