@@ -357,3 +357,34 @@ and hit Enter.
 ```
 </details>
 
+# Social Engineering
+<details>
+    <summary>Social</summary>
+
+### Tool: Social Engineering Toolkit(linux)
+
+</details>
+
+# DOS
+<details>
+    <summary>
+        DoS 
+    </summary>
+- Spoof IP
+- SYN Flooding
+```
+use auxiliary/dos/tcp/synflood
+show options
+SYN flooding on port 4444
+set timeout 20000 //rest as shown in option
+```
+    
+- ### Wireshark
+```
+
+```
+
+</details>
+
+# Wireshark
+<details></details>
