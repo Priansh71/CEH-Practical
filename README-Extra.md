@@ -481,3 +481,27 @@ UDP Ping Scan:           nmap -sn -PU <Target IP Address>    UDP request
 ICMP ECHO Ping Scan:     nmap -sn -PE <Target IP Address>    ICMP LCBO request
 
 </details>
+
+## IOT Hacking
+<details>
+    <summary>IOT</summary>
+    
+### Tools:
+- Shodan.io
+
+- CRITIFENCE
+```
+ CRITIFENCE is an online database that stores default passwords of critical infrastructure, SCADA, [CS, and 110T Attackers can use this tool to discover
+the default credentials of an OT system It lists information such as product code, vendor, device type and its default username and password
+  ```
+- Nmap
+![image](https://github.com/Priansh71/CEH-Practical/assets/90593472/dbe2d60e-4af9-4376-b4ed-baa7e21dee5d) // nmap different types of scans.
+
+- Scada
+    - SCADA Shutdown Tool is an ICS testing and automation tool that allows attackers to fuzz, scan, and run remote commands on ICS/SCADA networks and controllers
+    - Attackers use this tool to examine and enumerate slave controllers and SCADA security systems as well as read register values of the controller and rewrite register data.
+      
+- #### Other Tools
+      - Nessus
+      - wireshark
+</details>
