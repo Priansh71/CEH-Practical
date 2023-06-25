@@ -274,6 +274,90 @@ blah';exec master..xp_cmdshell 'ping www.moviescope.com -l 65000 -t'; --
 ```
 </details>
 
+# 8) Sniffing
+<details>
+    <summary> Wireshark</summary>
+      - Some useful wireshark command 
+```
+filter : http
+option --> find packet->> select string --> pwd  // to find pwd string in packets
+```
+ip.addr == x.x.x.x
+
+Sets a filter for any packet that has x.x.x.x as the source or destination IP address. This is very useful if, let’s say, you want to analyze specific traffic. Applying this filter helps you analyze outgoing traffic to see which one matches the IP or source you’re looking for. 
+You can also choose to use ip.dst == x.x.x.x to filter only by destination or ip.src == x.x.x.x to filter by source.
+ 
+ip.addr == x.x.x.x && ip.addr == x.x.x.x 
+
+(or ip.src == xxxx && ip.dst == xxxx - for a destination)
+
+Sets a conversation filter between two specific IP addresses. This one helps you check the data between two specific hosts or networks. It helps you when you are looking for specific data, so you don’t have to go through others that don’t interest you.
+
+ 
+
+http or dns
+
+Sets a filter to display all http and dns protocols. It lets you narrow down to the exact protocol you need. So, if you need to track down an odd FTP traffic, then you just have to set it for ‘ftp’. Want to find out why some websites don’t appear? You just have to set it to ‘dns’.
+
+ 
+
+tcp.port==xxx
+
+Sets filters for any TCP packet with a specific source or destination port. Sometimes is just useful and less time consuming to look only at the traffic that goes into or out of a specific port.
+
+ 
+
+tcp.flags.reset==1
+
+Sets filters to display all TCP resets. All packets have a TCP, if this is set to 1, it tells the receiving computer that it should at once stop using that connection. So, this filter is a powerful one, being that a TCP reset kills a TCP connection immediately.
+
+ 
+
+tcp contains xxx
+
+It’s a filter that displays all TCP packets that contain a certain term (instead of xxx, use what term you’re looking for). For example, if you are looking for a specific term appearing in the packet, this filter is what you need.
+
+ 
+Follows a tcp stream.
+```
+tcp.stream eq X
+```
+
+- Filters by sequence number.
+```
+tcp.seq == x
+```
+ 
+- Important for troubleshooting, this filter detects push events.
+``` 
+tcp.flags.push == 1
+```
+
+- This one filters all HTTP GET and POST requests. It can show the most accessed webpages.
+````
+ http.request
+ ````
+
+- Designed to filter out certain types of protocols, it masks out arp, icmp, dns, or other protocols you think are not useful. This will allow you to focus of what traffic interests you.
+```
+ !(arp or icmp or dns)
+ ```
+
+- It sets a filter for certain HEX values at any offset.
+```
+udp contains xx:xx:xx
+```
+
+
+ 
+- Indicates which dns requests couldn't be correctly resolved.
+ ``` dns.flags.rcode != 0 ```
+
+</details>
+
+</details>
+
+
 ## Web Application Hacking
 <details>
     <summary> Web Hacking</summary>
@@ -378,94 +462,7 @@ show options
 SYN flooding on port 4444
 set timeout 20000 //rest as shown in option
 ```
-    
-- #### Wireshark
-<details>
-    <summary> Wireshark</summary>
-      - Some useful wireshark command 
-```
-filter : http
-option --> find packet->> select string --> pwd  // to find pwd string in packets
-```
-ip.addr == x.x.x.x
-
-Sets a filter for any packet that has x.x.x.x as the source or destination IP address. This is very useful if, let’s say, you want to analyze specific traffic. Applying this filter helps you analyze outgoing traffic to see which one matches the IP or source you’re looking for. 
-You can also choose to use ip.dst == x.x.x.x to filter only by destination or ip.src == x.x.x.x to filter by source.
- 
-ip.addr == x.x.x.x && ip.addr == x.x.x.x 
-
-(or ip.src == xxxx && ip.dst == xxxx - for a destination)
-
-Sets a conversation filter between two specific IP addresses. This one helps you check the data between two specific hosts or networks. It helps you when you are looking for specific data, so you don’t have to go through others that don’t interest you.
-
- 
-
-http or dns
-
-Sets a filter to display all http and dns protocols. It lets you narrow down to the exact protocol you need. So, if you need to track down an odd FTP traffic, then you just have to set it for ‘ftp’. Want to find out why some websites don’t appear? You just have to set it to ‘dns’.
-
- 
-
-tcp.port==xxx
-
-Sets filters for any TCP packet with a specific source or destination port. Sometimes is just useful and less time consuming to look only at the traffic that goes into or out of a specific port.
-
- 
-
-tcp.flags.reset==1
-
-Sets filters to display all TCP resets. All packets have a TCP, if this is set to 1, it tells the receiving computer that it should at once stop using that connection. So, this filter is a powerful one, being that a TCP reset kills a TCP connection immediately.
-
- 
-
-tcp contains xxx
-
-It’s a filter that displays all TCP packets that contain a certain term (instead of xxx, use what term you’re looking for). For example, if you are looking for a specific term appearing in the packet, this filter is what you need.
-
- 
-
-tcp.stream eq X
-
-Follows a tcp stream.
-
- 
-
-tcp.seq == x
-
-Filters by sequence number.
-
- 
-
-tcp.flags.push == 1
-
-Important for troubleshooting, this filter detects push events.
-
- 
-
-http.request
-
-This one filters all HTTP GET and POST requests. It can show the most accessed webpages.
-
- 
-
-!(arp or icmp or dns)
-
-Designed to filter out certain types of protocols, it masks out arp, icmp, dns, or other protocols you think are not useful. This will allow you to focus of what traffic interests you.
-
- 
-
-udp contains xx:xx:xx
-
-It sets a filter for certain HEX values at any offset.
-
- 
-
-dns.flags.rcode != 0 
-
-Indicates which dns requests couldn't be correctly resolved.
-</details>
-
-</details>
+   
 
 # Session Hijacking
 <details>
