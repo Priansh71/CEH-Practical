@@ -550,8 +550,7 @@ LPORT = 4444
 
 <details>
     <summary>DoS using Slowloris</summary>
-[Reference](https//nmap.org/nsedoc/scripts/http-slowloris-
-check-html)
+ 
 - Capture request using wireshark
 - In Terminal
     
