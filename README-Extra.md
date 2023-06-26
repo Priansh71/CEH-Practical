@@ -374,7 +374,7 @@ dns.flags.rcode != 0
 </details>
 
 
-## Web Application Hacking
+## 14)Web Application Hacking
 <details>
     <summary> Web Hacking</summary>
     
@@ -457,7 +457,7 @@ and hit Enter.
 ```
 </details>
 
-# Social Engineering
+# 9)Social Engineering
 <details>
     <summary>Social</summary>
 
@@ -465,7 +465,7 @@ and hit Enter.
 
 </details>
 
-# DOS
+# 10)DOS
 <details>
     <summary>
         DoS 
@@ -479,8 +479,9 @@ SYN flooding on port 4444
 set timeout 20000 //rest as shown in option
 ```
    
+</details>
 
-# Session Hijacking
+# 11)Session Hijacking
 <details>
     <summary>Session Hijacking</summary>
 
@@ -488,7 +489,7 @@ set timeout 20000 //rest as shown in option
 </details>
 
 
-## Host DIscovery
+# Host DIscovery
 <details>
     <summary>Hsot Discover</summary>
 ```
@@ -498,7 +499,7 @@ ICMP ECHO Ping Scan:     nmap -sn -PE <Target IP Address>    ICMP LCBO request
 
 </details>
 
-## IOT Hacking
+# 18)IOT Hacking
 <details>
     <summary>IOT</summary>
     
@@ -522,7 +523,7 @@ the default credentials of an OT system It lists information such as product cod
       - wireshark
 </details>
 
-## Cryptography
+## 20)Cryptography
 <details>
     <summary>Cryptography</summary>
 </details>
