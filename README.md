@@ -175,6 +175,13 @@ SNOW.EXE -C -p 1234  ciper.txt
 #  LLMNR/NBT-NS Poisoning
 <details>
 <summary> LLMNR/NBT</summary>
+  
+- In Kali
+  
+```
+responder -h
+```
+
 
 > [Responder](https://github.com/lgandx/Responder) : rogue authentication server to capture hashes
 >
