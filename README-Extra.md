@@ -395,12 +395,13 @@ dns.flags.rcode != 0
 </details>
 
 ## 10)DOS
+
 <details>
-    <summary>
-        DoS 
-    </summary>
+    <summary>DoS</summary>
+    
 - Spoof IP
 - SYN Flooding
+    
 ```
 use auxiliary/dos/tcp/synflood
 show options
