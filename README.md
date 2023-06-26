@@ -176,7 +176,7 @@ SNOW.EXE -C -p 1234  ciper.txt
 <details>
 <summary> LLMNR/NBT</summary>
   
-- In Kali
+- [Reference Guide](https://certmaster.me/a-detailed-guide-on-responder-llmnr-poisoning-22f3a07b9786?gi=809a695ee049):
   
 ```
 responder -h
