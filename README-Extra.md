@@ -374,6 +374,37 @@ dns.flags.rcode != 0
 </details>
 
 
+## 9)Social Engineering
+<details>
+    <summary>Social</summary>
+
+### Tool: Social Engineering Toolkit(linux)
+
+</details>
+
+## 10)DOS
+<details>
+    <summary>
+        DoS 
+    </summary>
+- Spoof IP
+- SYN Flooding
+```
+use auxiliary/dos/tcp/synflood
+show options
+SYN flooding on port 4444
+set timeout 20000 //rest as shown in option
+```
+   
+</details>
+
+## 11)Session Hijacking
+<details>
+    <summary>Session Hijacking</summary>
+
+
+</details>
+
 ## 14)Web Application Hacking
 <details>
     <summary> Web Hacking</summary>
@@ -455,37 +486,6 @@ set Iport 4444
 and hit Enter.
 - vist the uri where the file is to execute on web browser
 ```
-</details>
-
-## 9)Social Engineering
-<details>
-    <summary>Social</summary>
-
-### Tool: Social Engineering Toolkit(linux)
-
-</details>
-
-## 10)DOS
-<details>
-    <summary>
-        DoS 
-    </summary>
-- Spoof IP
-- SYN Flooding
-```
-use auxiliary/dos/tcp/synflood
-show options
-SYN flooding on port 4444
-set timeout 20000 //rest as shown in option
-```
-   
-</details>
-
-## 11)Session Hijacking
-<details>
-    <summary>Session Hijacking</summary>
-
-
 </details>
 
 
