@@ -197,13 +197,10 @@ net use // session with name e would have been created
 <details>
     <summary>Vulnerability Analysis</summary>
 
-### Nessus Vulnerability Scanner
--
-```bash
+- ### Nessus Vulnerability Scanner
 
-```
-### Nikto
--
+- ### Nikto
+
 ```bash
 nikto -h url -Cgidirs all
 ```
