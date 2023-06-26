@@ -528,3 +528,11 @@ UDP Ping Scan:           nmap -sn -PU <Target IP Address>    UDP request
 ICMP ECHO Ping Scan:     nmap -sn -PE <Target IP Address>    ICMP LCBO request
 
 </details>
+
+#  LLMNR/NBT-NS Poisoning
+<details>
+<summary> LLMNR/NBT</summary>
+  
+- [Reference Guide](https://certmaster.me/a-detailed-guide-on-responder-llmnr-poisoning-22f3a07b9786?gi=809a695ee049):
+
+  </details>
