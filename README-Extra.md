@@ -93,7 +93,12 @@ $ set RHOSTS xx.xx.xx.8-16
 $ set THREADS 1000
 $ run 
 ```
-- Now you can see the os_flavor 
+- Now you can see the os_flavor. For This type 
+
+```bash
+$ host or hosts
+```
+
 - Hence Extracted information about network using metasploit
 </details>
 </details>
